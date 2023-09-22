@@ -2,14 +2,13 @@ group 'com.document.scanner.flutter.document_scanner_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.9.10'
     repositories {
         google()
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -18,7 +17,6 @@ rootProject.allprojects {
     repositories {
         maven { url 'https://jitpack.io' }
         google()
-        jcenter()
     }
 }
 
@@ -27,11 +25,11 @@ apply plugin: 'kotlin-android'
 
 
 android {
-    compileSdkVersion 33
-
+    namespace 'com.document.scanner.flutter.document_scanner_flutter'
     defaultConfig {
+        compileSdk 34
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         ndkVersion "21.1.6352462"
